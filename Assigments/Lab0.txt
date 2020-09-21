@@ -1,0 +1,40 @@
+Note: This was taken from 411, you mentioned on Piazza that we could just re-submit this for 412. 
+1.1
+delay 200
+show goal
+git commit
+git commit
+1.2
+git branch bugFix
+git checkout bugFix
+1.3
+Git branch bugFix
+Git checkout bugFix
+Git commit
+Git checkout master
+Git commit
+Git merge bugFix
+1.4
+Git branch bugFix
+Git checkout bugFix
+Git commit
+Git checkout master
+Git commit
+Git checkout bugFix
+Git rebase master
+2.1
+Git checkout c4
+2.2
+Git checkout bugFix^
+2.3
+Git checkout c1
+Git branch -f bugFix HEAD^
+Git branch -f master c6
+2.4
+Git reset HEAD~1
+Git checkout pushed
+Git revert pushed
+3.1
+Git cherry-pick c3 c4 c7
+3.2
+Git rebase -i HEAD~5
