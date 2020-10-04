@@ -50,6 +50,8 @@ function reverseAlphabetical(originalString) {
 
 }
 
-var input = "supercalifragilisticexpialidocious";
-console.log(`Input: ${input}`);
-console.log(`Output: ${reverseAlphabetical(input)}`);
+// var input = "supercalifragilisticexpialidocious";
+// console.log(`Input: ${input}`);
+// console.log(`Output: ${reverseAlphabetical(input)}`);
+
+module.exports = {reverseAlphabetical};
