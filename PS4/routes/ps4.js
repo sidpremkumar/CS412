@@ -1,6 +1,6 @@
-var express = require('express');
+const express = require('express');
 const https = require('https')
-var router = express.Router();
+const router = express.Router();
 
 // API used: https://documenter.getpostman.com/view/10808728/SzS8rjbc
 
