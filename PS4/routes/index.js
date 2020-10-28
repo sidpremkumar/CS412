@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const https = require('https')
+const config = require("../config.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // Get all the countries\
-  const url = 'https://api.covid19api.com/countries'
+  // Get all the countries
+  const url = config.countriesEndpoint
   https.get(url, (resp) => {
     let data = '';
 

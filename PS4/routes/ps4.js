@@ -1,6 +1,7 @@
 const express = require('express');
 const https = require('https')
 const router = express.Router();
+const config = require("../config.json");
 
 // API used: https://documenter.getpostman.com/view/10808728/SzS8rjbc
 
@@ -12,7 +13,7 @@ router.post('/', function(req, res, next) {
 
     // Make our API call
     // https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html
-    const url = 'https://api.covid19api.com/country/' + countryName + '/status/confirmed'
+    const url = config.countryEndpoint.replace("COUNTRYNAME", countryName);
     https.get(url, (resp) => {
         let data = '';
 
