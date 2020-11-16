@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Determine how many COVID cases different countries have:
+  form(name="select-country", method="post", action="/ps4")
+    p Country: 
+      select(name = "country")
+        each country in countries
+          option(value=country.Slug) #{country.Country}
+    input(type="submit", value="Submit")
+  p All data has been pulled from #[a(href="https://covid19api.com/") covid19api.com].
