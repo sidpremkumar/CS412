@@ -1,6 +1,3 @@
-// import { Country } from './country';
-// import { CountryData } from './countryData';
-//
 export const countryDataMock: {
   Slug: string;
   Country: string;
