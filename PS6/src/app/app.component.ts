@@ -56,7 +56,8 @@ export class AppComponent {
 
     // Mock the http.get call
     const response = countriesDataMock[url];
-    console.log(response);
+
+    // Determine if the country we selected has any data
     if (response.length >= 1) {
       const latestData = response[response.length - 1];
       this.selectedCountry = {
@@ -65,11 +66,11 @@ export class AppComponent {
         data: true,
       };
     } else {
-          this.selectedCountry = {
-            countryName: 'N/A',
-            numberOfCases: -1,
-            data: false,
-          };
+      this.selectedCountry = {
+        countryName: 'N/A',
+        numberOfCases: -1,
+        data: false,
+      };
     }
 
     // Set our clicked bool to true to display the data
