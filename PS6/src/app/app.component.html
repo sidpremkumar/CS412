@@ -1,0 +1,22 @@
+<h1>Determine how many COVID cases different countries have:</h1>
+<!--https://stackoverflow.com/questions/33700266/how-can-i-get-new-selection-in-select-in-angular-2-->
+<select (change)="setSelectedCountry($event.target.value)">
+  <option *ngFor='let country of allCountries' value='{{country.countryCode}}'>{{country.countryName}}</option>
+</select>
+
+<br/><br/>
+
+<button (click)="submitForm()">Submit</button>
+
+<br/><br/>
+
+<!--https://angular.io/api/common/NgIf-->
+<div *ngIf="clicked == true ">
+  <div *ngIf="selectedCountry && selectedCountry.data == true; then ifBlock else elseBlock"></div>
+  <ng-template #ifBlock>
+    {{ selectedCountry.countryName }} has {{ selectedCountry.numberOfCases }} cases of COVID-19
+  </ng-template>
+  <ng-template #elseBlock>
+    The country you have selected does not have any data available :(
+  </ng-template>
+</div>
