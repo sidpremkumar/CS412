@@ -1,0 +1,9 @@
+<!--https://stackoverflow.com/questions/33700266/how-can-i-get-new-selection-in-select-in-angular-2-->
+<select (change)="setSelectedCountry($event.target.value)">
+  <option *ngFor='let country of allCountries' value='{{country.countryName}}'>{{country.countryName}}</option>
+</select>
+
+<br/><br/>
+
+<button (click)="submitForm()">Submit</button>
+

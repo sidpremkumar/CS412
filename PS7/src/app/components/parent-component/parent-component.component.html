@@ -1,0 +1,25 @@
+<h1 style="text-align: center">Determine how many COVID cases different countries have:</h1>
+
+
+<!--https://stackoverflow.com/questions/34580572/center-h1-in-the-middle-of-screen-->
+<app-top-component style="display: flex; justify-content: center;" [allCountries]="allCountries" (selectedCountry)="setSelectedCountry($event)"
+(submitedCountry)="submitForm()"></app-top-component>
+
+
+<!--https://angular.io/api/common/NgIf-->
+<div *ngIf="clicked == true" >
+  <div *ngIf="selectedCountry && selectedCountry.data == false; then ifBlock"></div>
+  <ng-template #ifBlock>
+    <div  style="display: flex; justify-content: center;">
+      {{ selectedCountry.countryName }} does not have any data available :(
+    </div>
+    <br>
+  </ng-template>
+  <ul *ngFor='let someCountry of previousData'  style="display: flex; justify-content: center;">
+    <li>
+      <app-bottom-component [selectedCountry]="someCountry"></app-bottom-component>
+    </li>
+  </ul>
+</div>
+
+<p style="text-align: center" > All data obtained from <a href="https://covid19api.com/">covid19api.com</a></p>
