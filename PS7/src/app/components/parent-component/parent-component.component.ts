@@ -16,6 +16,7 @@ export class ParentComponentComponent implements OnInit {
   private selectedCountryName: string;
   private clicked: boolean;
   private previousCountry: string;
+  private latestFromCache: boolean;
 
   constructor(private _cvService: cvService ) {
     // Load in all our country data
@@ -71,6 +72,10 @@ export class ParentComponentComponent implements OnInit {
                 data: false,
               };
             }
+
+            // If we got this from the cache, tell the user that !
+            console.log(response.cached);
+            this.latestFromCache = response.cached;
           }
         );
         // update previous country

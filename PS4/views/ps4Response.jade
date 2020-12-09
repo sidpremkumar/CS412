@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Number of COVID cases in #{country}
+  p Currently #{country} has #{cases} cases
+  form(name="back", method="get", action="/")
+    input(type="submit", value="Go Back!")

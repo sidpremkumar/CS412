@@ -1,4 +1,6 @@
+<!--Take a look at the rendered HTML!-->
 <h1 style="text-align: center">Determine how many COVID cases different countries have:</h1>
+
 
 
 <!--https://stackoverflow.com/questions/34580572/center-h1-in-the-middle-of-screen-->
@@ -22,4 +24,7 @@
   </ul>
 </div>
 
+<div *ngIf="latestFromCache == true" style="text-align: center">
+  Latest call to my data base returned data from a Redis Cache!
+</div>
 <p style="text-align: center" > All data obtained from <a href="https://covid19api.com/">covid19api.com</a></p>

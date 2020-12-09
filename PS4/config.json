@@ -1,0 +1,4 @@
+{
+    "countriesEndpoint": "https://api.covid19api.com/countries",
+    "countryEndpoint": "https://api.covid19api.com/country/COUNTRYNAME/status/confirmed"
+}
