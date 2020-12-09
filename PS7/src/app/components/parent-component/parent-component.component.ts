@@ -12,11 +12,12 @@ export class ParentComponentComponent implements OnInit {
 
   public allCountries: Country[] = [];
   public selectedCountry: CountryData;
-  private previousData: CountryData[] = [];
+  public previousData: CountryData[] = [];
+  public latestFromCache: boolean;
+  public clicked: boolean;
   private selectedCountryName: string;
-  private clicked: boolean;
   private previousCountry: string;
-  private latestFromCache: boolean;
+
 
   constructor(private _cvService: cvService ) {
     // Load in all our country data

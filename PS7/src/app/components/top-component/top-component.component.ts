@@ -13,8 +13,6 @@ export class TopComponentComponent implements OnInit {
 
   @Input() allCountries: Country[];
 
-  private previousCountry: string;
-
   constructor() { }
 
   ngOnInit(): void { }

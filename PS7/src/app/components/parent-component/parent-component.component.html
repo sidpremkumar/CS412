@@ -22,9 +22,20 @@
       <app-bottom-component [selectedCountry]="someCountry"></app-bottom-component>
     </li>
   </ul>
+
+  <div *ngIf="latestFromCache == true; then ifLatestCallBack else elseLatestCallBlock" ></div>
+  <ng-template #ifLatestCallBack>
+    <div style="text-align: center">
+      Latest call to my data base returned data from a <b>Redis Cache</b>!
+    </div>
+  </ng-template>
+  <ng-template #elseLatestCallBlock>
+    <div style="text-align: center">
+      Latest call to my data base returned data from a <b>3rd Party API</b>!
+    </div>
+  </ng-template>
 </div>
 
-<div *ngIf="latestFromCache == true" style="text-align: center">
-  Latest call to my data base returned data from a Redis Cache!
-</div>
+
+
 <p style="text-align: center" > All data obtained from <a href="https://covid19api.com/">covid19api.com</a></p>
